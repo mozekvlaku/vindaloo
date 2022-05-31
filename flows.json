@@ -1,0 +1,941 @@
+[
+    {
+        "id": "f23e97bb1f10580c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7928881b3b024660",
+        "type": "mqtt out",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "topic": "vindaloo/blinds",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9581d6281ce3426b",
+        "x": 660,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "470682b0497fd3ed",
+        "type": "inject",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "up",
+        "payloadType": "str",
+        "x": 330,
+        "y": 200,
+        "wires": [
+            [
+                "7928881b3b024660"
+            ]
+        ]
+    },
+    {
+        "id": "0f2316132937f513",
+        "type": "inject",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "down",
+        "payloadType": "str",
+        "x": 330,
+        "y": 260,
+        "wires": [
+            [
+                "a6daba3f579c8d7e"
+            ]
+        ]
+    },
+    {
+        "id": "a6daba3f579c8d7e",
+        "type": "mqtt out",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "topic": "vindaloo/blinds",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9581d6281ce3426b",
+        "x": 660,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "382ac91633108ea7",
+        "type": "inject",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "stop",
+        "payloadType": "str",
+        "x": 330,
+        "y": 320,
+        "wires": [
+            [
+                "adfaa95b241465b5"
+            ]
+        ]
+    },
+    {
+        "id": "adfaa95b241465b5",
+        "type": "mqtt out",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "topic": "vindaloo/blinds",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9581d6281ce3426b",
+        "x": 660,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "99d7b00d2cc9666c",
+        "type": "ui_button",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "group": "5ea747bcb16f4e8c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Dolů",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "up",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "7928881b3b024660",
+                "04fb84e1146253ac",
+                "cfa798d4ee134b71"
+            ]
+        ]
+    },
+    {
+        "id": "90f55814de1564c5",
+        "type": "ui_button",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "group": "5ea747bcb16f4e8c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Nahoru",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "down",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 260,
+        "wires": [
+            [
+                "a6daba3f579c8d7e",
+                "04fb84e1146253ac",
+                "cfa798d4ee134b71"
+            ]
+        ]
+    },
+    {
+        "id": "ec14a7c91187d4ab",
+        "type": "ui_button",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "group": "5ea747bcb16f4e8c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Stop",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "stop",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 320,
+        "wires": [
+            [
+                "adfaa95b241465b5",
+                "04fb84e1146253ac",
+                "cfa798d4ee134b71"
+            ]
+        ]
+    },
+    {
+        "id": "04fb84e1146253ac",
+        "type": "change",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "up",
+                "fromt": "str",
+                "to": "Žaluzie se zatahují",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "down",
+                "fromt": "str",
+                "to": "Žaluzie se roztahují",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "stop",
+                "fromt": "str",
+                "to": "Žaluzie jsou zastaveny",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 400,
+        "wires": [
+            [
+                "d586801cea2d33be"
+            ]
+        ]
+    },
+    {
+        "id": "d586801cea2d33be",
+        "type": "ui_text",
+        "z": "f23e97bb1f10580c",
+        "group": "5ea747bcb16f4e8c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Stav",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 870,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "d073f8d3cb0bac57",
+        "type": "ui_audio",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "group": "5ea747bcb16f4e8c",
+        "voice": "Microsoft Jakub - Czech (Czech Republic)",
+        "always": "",
+        "x": 860,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "cfa798d4ee134b71",
+        "type": "change",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "down",
+                "fromt": "str",
+                "to": "Roztahuji žaluzie",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "up",
+                "fromt": "str",
+                "to": "Zatahuji žaluzie",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "stop",
+                "fromt": "str",
+                "to": "Žaluzie se zastavily",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 460,
+        "wires": [
+            [
+                "d073f8d3cb0bac57"
+            ]
+        ]
+    },
+    {
+        "id": "546db662db7090e3",
+        "type": "ui_text",
+        "z": "f23e97bb1f10580c",
+        "group": "b078816dcb313e57",
+        "order": 1,
+        "width": "4",
+        "height": "2",
+        "name": "",
+        "label": "",
+        "format": "Dobrý den!",
+        "layout": "row-spread",
+        "className": "",
+        "x": 595,
+        "y": 140,
+        "wires": [],
+        "icon": "font-awesome/fa-child",
+        "l": false
+    },
+    {
+        "id": "9ef6d8b13a3e4ce8",
+        "type": "ui_switch",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "label": "Světlo nad stolem",
+        "tooltip": "",
+        "group": "a9405787ca7602ff",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 850,
+        "y": 540,
+        "wires": [
+            [
+                "7b14abaee4a74e14"
+            ]
+        ]
+    },
+    {
+        "id": "dffb60ef5ea46507",
+        "type": "ui_gauge",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "group": "caca922f3e8d6537",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Teplota",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-5",
+        "max": "50",
+        "colors": [
+            "#0d4418",
+            "#0c9d59",
+            "#66ae61"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 620,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "2dd9516105e950c8",
+        "type": "ui_gauge",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "group": "caca922f3e8d6537",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Vlhkost",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 620,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "55b535362fcf1f7f",
+        "type": "ui_gauge",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "group": "ab3567c41aefdc98",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Hořlavé plyny",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 640,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "85b67d0dd05a9036",
+        "type": "change",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Pozor! Nebezpečná úroveň oxidu uhelnatého! Okamžitě opusťte místnost.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1120,
+        "y": 700,
+        "wires": [
+            [
+                "291aa642a8c1d043",
+                "e87f65f8bcf89ee5"
+            ]
+        ]
+    },
+    {
+        "id": "291aa642a8c1d043",
+        "type": "ui_audio",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "group": "a9405787ca7602ff",
+        "voice": "Microsoft Jakub - Czech (Czech Republic)",
+        "always": "",
+        "x": 1340,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "7b14abaee4a74e14",
+        "type": "tplink_toggle",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "deviceIp": "192.168.102.196",
+        "deviceAlias": "",
+        "deviceIpRange": "",
+        "searchMode": "ip",
+        "x": 1090,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "518aa4117d6cb9a7",
+        "type": "ui_switch",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "label": "Světlo v kuchyni",
+        "tooltip": "",
+        "group": "a9405787ca7602ff",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "120",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "50",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 860,
+        "y": 600,
+        "wires": [
+            [
+                "15cb137ad7157ca2"
+            ]
+        ]
+    },
+    {
+        "id": "15cb137ad7157ca2",
+        "type": "mqtt out",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "topic": "vindaloo/light1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9581d6281ce3426b",
+        "x": 1120,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "06cee9a57faa6a14",
+        "type": "mqtt in",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "topic": "vindaloo/blindso",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9581d6281ce3426b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 420,
+        "wires": [
+            [
+                "04fb84e1146253ac",
+                "cfa798d4ee134b71"
+            ]
+        ]
+    },
+    {
+        "id": "7e7fa66a90596a35",
+        "type": "mqtt in",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "topic": "vindaloo/info",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9581d6281ce3426b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1130,
+        "y": 760,
+        "wires": [
+            [
+                "291aa642a8c1d043",
+                "e87f65f8bcf89ee5"
+            ]
+        ]
+    },
+    {
+        "id": "e8f5198f5e7ae055",
+        "type": "mqtt in",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "topic": "vindaloo/flammablegas",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9581d6281ce3426b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 380,
+        "y": 720,
+        "wires": [
+            [
+                "55b535362fcf1f7f",
+                "57f1e687025deca5"
+            ]
+        ]
+    },
+    {
+        "id": "e4208aa16a530da0",
+        "type": "mqtt in",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "topic": "vindaloo/flammableok",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9581d6281ce3426b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 380,
+        "y": 780,
+        "wires": [
+            [
+                "02507b69c61d0807"
+            ]
+        ]
+    },
+    {
+        "id": "7459e1543d9a8385",
+        "type": "mqtt in",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "topic": "vindaloo/carbonmonoxideok",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9581d6281ce3426b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 400,
+        "y": 840,
+        "wires": [
+            [
+                "dce91219fbd57569"
+            ]
+        ]
+    },
+    {
+        "id": "e87f65f8bcf89ee5",
+        "type": "ui_toast",
+        "z": "f23e97bb1f10580c",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1370,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "1879b65d26e7d057",
+        "type": "mqtt in",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "topic": "vindaloo/humidity",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9581d6281ce3426b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 360,
+        "y": 660,
+        "wires": [
+            [
+                "2dd9516105e950c8"
+            ]
+        ]
+    },
+    {
+        "id": "07aa1bc8789dd246",
+        "type": "mqtt in",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "topic": "vindaloo/temperature",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9581d6281ce3426b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 380,
+        "y": 600,
+        "wires": [
+            [
+                "dffb60ef5ea46507"
+            ]
+        ]
+    },
+    {
+        "id": "57f1e687025deca5",
+        "type": "ui_chart",
+        "z": "f23e97bb1f10580c",
+        "name": "",
+        "group": "ab3567c41aefdc98",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Vývoj plynu",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 630,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "02507b69c61d0807",
+        "type": "ui_text",
+        "z": "f23e97bb1f10580c",
+        "group": "ab3567c41aefdc98",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Obsah hořlavých plynů",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 660,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "dce91219fbd57569",
+        "type": "ui_text",
+        "z": "f23e97bb1f10580c",
+        "group": "ab3567c41aefdc98",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Obsah oxidu uhelnatého",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 670,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "9581d6281ce3426b",
+        "type": "mqtt-broker",
+        "name": "VindalooHub",
+        "broker": "vindaloo.local",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5ea747bcb16f4e8c",
+        "type": "ui_group",
+        "name": "Žaluzie - Okno u stolu",
+        "tab": "f13408d9c2ca0a7d",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b078816dcb313e57",
+        "type": "ui_group",
+        "name": "Úvod",
+        "tab": "f13408d9c2ca0a7d",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a9405787ca7602ff",
+        "type": "ui_group",
+        "name": "Světla - Pokoj",
+        "tab": "f13408d9c2ca0a7d",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "caca922f3e8d6537",
+        "type": "ui_group",
+        "name": "Sensorický blok",
+        "tab": "f13408d9c2ca0a7d",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ab3567c41aefdc98",
+        "type": "ui_group",
+        "name": "Sensorický blok - plyny",
+        "tab": "f13408d9c2ca0a7d",
+        "order": 3,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f13408d9c2ca0a7d",
+        "type": "ui_tab",
+        "name": "Domov | Vindaloo",
+        "icon": "home",
+        "disabled": false,
+        "hidden": false
+    }
+]
